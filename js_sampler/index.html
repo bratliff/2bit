@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JavaScript Gallery</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/interactive_map.css" />
+<link rel="stylesheet" type="text/css" href="includes/video_gallery.css" />
+<link rel="stylesheet" type="text/css" href="includes/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" type="text/css" href="css/button_style1.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery/css/ui-lightness/jquery-ui-1.9.1.custom.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+<script src="js/jquery/jquery-ui-1.9.1.custom.min.js"></script>
+<script type="text/javascript" src="includes/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="includes/video_gallery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/interactive_map.js"></script>
+<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
+
+
+	<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<link rel="stylesheet" type="text/css" href="includes/video_gallery_ie.css" />
+		<![endif]-->
+
+
+
+<link href="css/morph_buttons.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+    
+    <header>
+    <h1>JavaScript, HTML5, CSS3 and JQuery Sampler</h1>
+        <nav>
+        	<ul class="navlist">  
+            	<li><a href="#textControl" class="link">Text Control</a></li>          
+                <li><a href="#formValid" class="link">Form Validation</a></li>
+                <li><a href="#videoGallery" class="link">Video Gallery</a></li>
+                <li><a href="#interactiveMap" class="link">Interactive Map</a></li>
+            </ul>
+            <div class="clear"></div>
+            <ul class="navlist">
+                 <li><a href="#interactiveButtons" class="link">Anim Buttons</a></li>
+                 <li><a href="#animation" class="link">Animation</a></li>     
+            </ul>
+        </nav>
+        <div class="clear"></div>
+    </header>
+    
+    
+    <!-- begin interActiveMap div -->
+    <article id="interactiveMap" class="exhibit">
+    
+    <div class="content">
+      <div class="closer"><a href="#top" id="closer">close this</a></div>
+    	<h2>The 10 Largest American Cities</h2>
+         <div class="tagline">> Interactive map</div>
+			<div class="map_contianer">
+        
+			<a class="dot" style="top:137px; left:628px;" state="NY" city="ny"></a>
+			<a class="dot" style="top:251px; left:65px;"  state="CA" city="la"></a>
+			<a class="dot" style="top:149px; left:457px;" state="IL" city="chicago" ></a>
+			<a class="dot" style="top:355px; left:366px;" state="TX" city="houston"></a>
+			<a class="dot" style="top:161px; left:609px;" state="PA" city="philadelphia"></a>
+			<a class="dot" style="top:268px; left:150px;" state="AZ" city="phoenix"></a>
+			<a class="dot" style="top:360px; left:320px;" state="TX" city="sanantonio"></a>
+			<a class="dot" style="top:273px; left:93px;" state="CA" city="sandiego"></a>
+			<a class="dot" style="top:304px; left:342px;" state="TX" city="dallas"></a>
+			<a class="dot" style="top:195px; left:27px;" state="CA" city="sanjose"></a>
+            
+			<!-- Form -->
+            
+			<form id="mapForm" name="mapForm" class="form_state" method="post" action="">
+            <div id="chooseText">Choose by state:</div>
+				<select name="state" id="state">
+					<option value="AZ">Arizona</option>
+					<option value="CA">California</option>
+					<option value="IL">Illinois</option>
+					<option value="NY">New York</option>
+					<option value="PA">Pennsylvania</option>
+					<option value="TX">Texas</option>
+					<option value="ALL" selected="selected">Show by state</option>
+				</select>
+			</form>
+<!-- City details -->
+			<div class="detail_container">
+				<!-- City -->
+				<div class="city_detail">
+					<h3>Choose a city</h3>
+					<p>Click on dots for info on each city.</p>
+					<p>Use selector at left to view by state.</p>
+				</div>
+			</div>
+			
+	</div>
+	
+		
+		
+<div class="city_detail_container">
+			<!-- City -->
+			<div class="city_detail" id="ny">
+				<img class="city_photo" src="images/cities/ny.jpg" alt="new york" width="75" height="75" />
+				<div class="city_info">
+					<h2>New York</h2>
+					<h3>New York</h3>
+					<p>With a population of 8,175,133, The Big Apple weighs in as heavyweight champion of all U.S. cities.</p>
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="la">
+				<img class="city_photo" src="images/cities/la.jpg" alt="los angeles" width="75" height="75" />
+				<div class="city_info">
+					<h2>Los Angeles</h2>
+					<h3>California</h3>
+					<p>With a claim of 3,792,621 people, Los Angeles ranks a distant second to New York City.</p>
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="chicago">
+				<img class="city_photo" src="images/cities/chicago.jpg" alt="chicago" width="75" height="75" />
+				<div class="city_info">
+					<h2>Chicago</h2>
+					<h3>Illinois</h3>
+					<p>That toddlin' town is no toddler, with a population of 2,695,598, making it the third largest city in the U.S.</p>
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="houston">
+				<img class="city_photo" src="images/cities/houston.jpg" alt="houston" width="75" height="75" />
+				<div class="city_info">
+					<h2>Houston</h2>
+					<h3>Texas</h3>
+					<p>The energy belt of Texas ranks 4th among cities with a population of 2,099,451.</p>
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="philadelphia">
+				<img class="city_photo" src="images/cities/philly.jpg" alt="philadelphia" width="75" height="75" />
+				<div class="city_info">
+					<h2>Philadelphia</h2>
+					<h3>Pennsylvania</h3>
+					<p>The home of American liberty and world-famous cheesesteaks, Philadelphia ranks 5th largest in the United States.</p>
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="phoenix">
+				<img class="city_photo" src="images/cities/phoenix.jpg" alt="phoenix" width="75" height="75" />
+				<div class="city_info">
+					<h2>Phoenix</h2>
+					<h3>Arizona</h3>
+					<p>One of the fastest growing citiies in America, Phoenix now comes in in 6th place with a population of 1,445,632.</p>
+				</div>
+				<div class="clear_both"></div>
+			</div>
+            
+            <!-- City -->
+			<div class="city_detail" id="sanantonio">
+				<img class="city_photo" src="images/cities/sanantonio.jpg" alt="san antonio" width="75" height="75" />
+				<div class="city_info">
+					<h2>San Antonio</h2>
+					<h3>Texas</h3>
+					<p>Many people are surprised to find San Antonio is the 7th largest city in America, beating out Dallas with a population of 1,327,407.</p>
+				</div>
+				<div class="clear_both"></div>
+			</div>
+            
+                        <!-- City -->
+			<div class="city_detail" id="sandiego">
+				<img class="city_photo" src="images/cities/sandiego.jpg" alt="sandiego" width="75" height="75" />
+				<div class="city_info">
+					<h2>San Diego</h2>
+					<h3>California</h3>
+					<p>The land of palm trees and oceanviews comes in 8th with a population of 1,307,402.</p>
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			<!-- City -->
+<div class="city_detail" id="dallas">
+				<img class="city_photo" src="images/cities/dallas.jpg" alt="dallas" width="75" height="75" />
+				<div class="city_info">
+					<h2>Dallas</h2>
+					<h3>Texas</h3>
+					<p>Everything's bigger in Texas, including the cities. Dallas ranks 9th largest: population 1,197,816.</p>
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="sanjose">
+				<img class="city_photo" src="images/cities/sanjose.jpg" alt="san jose" width="75" height="75" />
+				<div class="city_info">
+					<h2>San Jose</h2>
+					<h3>California</h3>
+					<p>The center of America's silicon revoluation, San Jose clocks in at 10th largest city with a population of 945,942.</p>
+				</div>
+				<div class="clear_both"></div>
+			</div>
+        
+        <!-- end interactive map div -->
+        </div>
+        
+         <!-- end content div -->
+        </div>
+        </article>
+        
+         <!-- begin interActiveMap div -->
+    <article id="videoGallery" class="exhibit">
+   	   <div class="content">
+    	      <div class="closer"><a href="#top" id="closer">close this</a></div>
+    	<h2>Funny Animals Video Gallery</h2>
+         <div class="tagline">> Cross-platform multi-browser video gallery using HTML5 video standards</div>
+      
+      <div class="video_gallery_container">
+			<a class="videoLink" videowidth="352" videoheight="288" videofile="boxing_kitten"  videocaption="Boxing Kitten" ></a>
+			<a class="videoLink" videowidth="640" videoheight="360" videofile="dog_tease" videocaption="Dog Tease" ></a>
+			<a class="videoLink" videowidth="400" videoheight="250" videofile="gopher" videocaption="Gopher With Flair"></a>
+			<a class="videoLink" videowidth="640" videoheight="402"  videofile="talking_cats" videocaption="Some Chatty Cats"></a>
+			<a class="videoLink" videowidth="860" videoheight="540" videofile="treadmill_cats" videocaption="Cats With a Healthy Lifestyle"></a>
+			<a class="videoLink" videowidth="300" videoheight="168" videofile="cat_hat"  videocaption="Getting Ready for the Easter Party" ></a>
+            <a class="videoLink" videowidth="300" videoheight="168" videofile="cat_attack"  videocaption="Attack Kitty" ></a>
+            <a class="videoLink" videowidth="300" videoheight="168" videofile="puppy"  videocaption="Puppy Pad" ></a>
+			<div class="clear_both"></div>
+            </div>
+		<!-- video container for fancybox -->
+		<div style="display: none;">
+			<div id="videoPlayer"></div>
+		</div>
+      
+      <!-- end content div -->
+      </div>
+    </article>
+    
+    <!-- form validation example -->
+    
+    <article id="formValid" class="exhibit">
+    
+    <div class="content">
+      <div class="closer"><a href="#top" id="closer">close this</a></div>
+    	<h2>Form Validation</h2>
+         <div class="tagline">> Checking inputs</div>
+    	
+       <div class="form-div">
+  <form id="form1" method="post" action="">
+    <div class="form-row"> <span class="label">Name *</span>
+      <input type="text" name="name" id="namefield">
+    </div>
+    <div class="form-row"> <span class="label">E-Mail *</span>
+      <input type="text" name="email">
+    </div>
+    <div class="form-row"> <span class="label">URL&nbsp;&nbsp;&nbsp;</span>
+      <input type="text" name="url">
+    </div>
+    <div class="form-row"> <span class="label">Your comment *</span>
+      <textarea name="comment"></textarea>
+    </div>
+    <div class="form-row">
+      <input class="submit" type="submit" value="Submit">
+    </div>
+  </form>
+
+<div id="responder">  
+<p>Thank you. We have added the following info to our database.</p>
+<p><b>Name:</b> <span id="yourName"></span></p>
+<p><b>E-mail:</b> <span id="emailField"></span></p>
+<p><b>URL:</b> <span id="urlField"></span></p>
+<p><b>Comment:</b> <span id="commentField"></span></p>
+</div> 
+       
+       </div>
+
+	</article>  
+    
+        <!-- text control example -->     
+    
+    <article id="textControl" class="exhibit">
+    
+    <div class="content">
+      <div class="closer"><a href="#top" id="closer">close this</a></div>
+    	<h2>Text Control</h2>
+         <div class="tagline">> Searching text within the DOM</div>
+    	
+        	<div id="samplePara">
+            <div id="controls">
+            	<ul class="controls">Push buttons to operate:
+            		<li id="maskPhones"><a href="#">mask phone numbers</a></li>
+            		<li id="unmaskPhones"><a href="#">unmask phone numbers</a></li>
+                	<li id="highlight"><a href="#">search paragraphs for <br />bad content</a></li>
+                	<li id="remove"><a href="#">remove offending paragraphs</a></li>
+                    <li id="restore"><a href="#">restore offending paragraphs</a></li>
+                    <li id="wordReplace"><a href="#">replace offending words</a></li>
+                    <li id="wordRestore"><a href="#">restore offending words</a></li>
+                    <li id="addLink"><a href="#">add helpful links</a></li>
+                </ul>
+            </div>
+      		<div id="replacePara">
+            <p>Lorem ipsum dolor sit amet <b>fracking</b> consectetur adipiscing 1.345.238.3456 elit. Donec <b>fracking</b> tristique magna accumsan odio ultricies dignissim non vel metus. Phasellus urna lorem, 345.238.3456 mollis eget sodales sed, tempus ut nibh. Quisque sed nisi porta ipsum interdum laoreet in quis velit.</p>
+            
+             <p>Vivamus interdum 458 284 2384 bibendum nisl, posuere <b>fracking</b> dictum nibh mollis ut. Donec et est nisl. Duis accumsan lacus ut velit tempus varius. In at blandit tortor. Ut dolor justo, aliquet eu rutrum eu, accumsan eget nisi.</p>
+
+             <p>Phasellus suscipit 345-283-2783 fermentum ipsum a vulputate. Morbi vulputate congue elit, at porta arcu ornare nec. Nulla massa erat, scelerisque rutrum accumsan quis, malesuada vitae tellus. In hac habitasse platea dictumst. Quisque et arcu lorem, et blandit arcu. Morbi 345-238-3456 posuere volutpat nibh, vitae malesuada sapien posuere sit amet.</p>
+
+			<p>Morbi eu tristique <b>fracking</b> leo. Duis malesuada tortor sapien, et fermentum <b>fracking</b> lorem. Pellentesque habitant morbi <b>fracking</b> tristique senectus et netus et malesuada fames 11-203-495-1948 ac turpis egestas.</p>
+            
+ 			<p>Phasellus neque tortor, vulputate nec suscipit ullamcorper, rutrum ut felis. Nullam nec quam nec justo pulvinar elementum et ac leo. </p>
+			</div>
+
+ 			</div>
+    
+       </div>
+
+	</article>  
+    
+    <!-- begin interactive buttons -->
+     <article id="interactiveButtons" class="exhibit">
+    
+    <div class="content">
+      <div class="closer"><a href="#top" id="closer">close this</a></div>
+    	<h2>Animated Buttons</h2>
+         <div class="tagline">> Interactive buttons using only CSS3</div>
+    	
+        	<div class="button-wrapper">
+					<a href="#" class="a-btn">
+						<span class="a-btn-slide-text">$100<br />
+                      <small>per hour</small></span>
+						<img src="images/icons/voiceover.png" alt="Photos" />
+						<span class="a-btn-text"><small>Professional</small>Voiceover</span> 
+						<span class="a-btn-icon-right"><span></span></span>
+					</a>
+           </div>
+           
+            <a class="button orange morph" href="#looks">VISIT</a>
+            
+            <div class="view view-first">
+                    <img src="images/mailman.jpg" />
+              </div>  
+           
+           <div class="clear"></div>
+           
+           <!-- end content div -->
+           </div>
+
+	</article>   
+
+	    <!-- animation -->
+     <article id="animation" class="exhibit clearfix">
+    
+    <div class="content">
+      <div class="closer"><a href="#top" id="closer">close this</a></div>
+    	<h2>Animated Buttons</h2>
+         <div class="tagline">> Interactive buttons using only CSS3</div>
+
+         <div id="holder">
+		    <div id="sign"><img src="img/sign.gif" /></div>
+		    <div id="of"><img src="img/of.gif" /></div>
+		    <div class="swing">
+		        <img src="img/times.gif" />
+		    </div>
+		</div>
+
+		<div id="anim_controls">
+			<div id="slider"></div>
+			<div id="buttons">
+				<div class="button" id="playBtn">Play</div>
+				<div class="button" id="pauseBtn">Pause</div>
+				<div class="button" id="resumeBtn">Resume</div>
+				<div class="button" id="reverseBtn">Reverse</div>
+				<div class="button" id="timeScaleSlowBtn">Slow Speed</div>
+				<div class="button" id="timeScaleNormalBtn">Reg Speed</div>
+				<div class="button" id="timeScaleFastBtn">Fast Speed</div>
+				<div class="button" id="restartBtn">Restart</div>
+			</div>
+		</div>
+   <div class="clear"></div>
+      <div class="boxes">
+   		<div></div>
+   		<div></div>
+   		<div></div>
+   		<div></div>
+   		<div></div>
+	</div>
+	<div class="clear"></div>
+	<div class="button" id="playBtn2">Play</div>
+
+   </div>
+
+
+	</article>      
+    
+ 
+
+	</div>
+    <!-- end wrapper div -->    
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+@import url("reset.css");
+
+/* layout */
+
+
+#portfolio {
+	position:relative;
+	top:20px;
+	left:100px;
+	z-index:1;
+	width:600px;
+	height:400px;
+	margin:120px 0 0 0;
+}
+
+#portfolio .gallery,
+#portfolio .gallery .inside {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#portfolio .gallery {
+	width:600px;
+	height:400px;
+	overflow:hidden;
+	/*border:1px solid #fff;*/
+}
+
+#portfolio .gallery .inside {
+	z-index:1;
+}
+
+#portfolio .arrows a {
+	position:absolute;
+	z-index:3;
+	width:32px;
+	height:32px;
+	background-image:url(../images/arrows.png);
+	background-repeat:no-repeat;
+	outline:none;
+	text-indent:-9999px;
+}
+
+#portfolio .arrows .prev,
+#portfolio .arrows .up {
+	display:none;
+}
+
+#portfolio .arrows .up,
+#portfolio .arrows .down {
+	left:50%;
+	margin-left:-16px;
+}
+
+#portfolio .arrows .prev,
+#portfolio .arrows .next {
+	top:180px;
+}
+
+#portfolio .arrows .up {
+	background-position:0 -64px;
+	top:10px;
+}
+
+#portfolio .arrows .down {
+	background-position:0 -96px;
+	bottom:10px;
+}
+
+#portfolio .arrows .prev {
+	background-position:0 -32px;
+	left:7px;
+}
+
+#portfolio .arrows .next {
+	background-position:0 0;
+	right:7px;
+}
+
+#portfolio .arrows .up:hover {
+	background-position:-32px -64px;
+}
+
+#portfolio .arrows .down:hover {
+	background-position:-32px -96px;
+}
+
+#portfolio .arrows .next:hover {
+	background-position:-32px 0;
+}
+
+#portfolio .arrows .prev:hover {
+	background-position:-32px -32px;
+}
+
+
+#portfolio .item {
+	position:absolute;
+	top:0;
+	width:1000px;
+	height:600px;
+	/*border:1px #fff solid;*/
+}
+
+#portfolio .item div {
+	position:absolute;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+#portfolio .item div img {
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-500px;
+}
+
+#portfolio .paths {
+	position:absolute;
+	bottom:500px;
+	left:640px;
+	z-index:4;
+}
+
+#portfolio .paths div {
+	position:absolute;
+	top:100px;
+}
+
+#portfolio .paths a {
+	background:#FC0;
+	display:block;
+	position:absolute;
+	left:0;
+	outline:none;
+}
+
+#portfolio .paths a:hover,
+#portfolio .paths .active {
+	background:#FFF;
+}
+
+/* anchors */
+
+a {
+	text-decoration:none;
+	color:#fff;
+}
+/* heading */
+h1{
+	font-size:22px;
+	text-shadow:1px 1px 1px #000;
+	position:relative;
+	z-index:1000;
+	color:#fff;
+	font-weight:normal;
+	padding:10px;
+	margin-top:10px;
+	text-transform:uppercase;
+	background:#000;
+	float:left;
+}
+
+/* header */
+#header{
+	height:25px;
+	line-height:24px;
+	font-size:12px;
+	background:#000;
+	opacity:0.9;
+	text-transform:uppercase;
+	z-index:999;
+	position:relative;
+}
+#header a{
+	padding:5px 10px;
+	letter-spacing:1px;
+	text-shadow:1px 1px 1px #000;
+	color:#ddd;
+	text-align:right;
+}
+#header a:hover{
+	color:#fff;
+}
+#header a span{
+	font-weight:bold;
+}
+#header span.right_ab{
+	position:absolute;
+	right:4px;
+}
+
+

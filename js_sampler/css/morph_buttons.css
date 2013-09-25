@@ -1,0 +1,190 @@
+@import "http://fonts.googleapis.com/css?family=Medula+One";
+
+.button {
+    -moz-transition: background 0.2s ease-in-out 0s;
+    -moz-user-select: none;
+    background-color: #BFBFBF;
+   
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px 8px 8px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    color: #666666 !important;
+    display: inline-block;
+    font: 24px/1em 'Medula One',sans-serif;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    cursor:pointer;
+}
+button.button {
+    border-left: medium none;
+    border-right: medium none;
+}
+button.button:hover {
+    cursor: pointer;
+}
+.button:before {
+    font: 1.2em/0 sans-serif;
+    margin-right: 0.4em;
+}
+
+.button.orange {
+    background-color: #f1d039;
+    box-shadow: 0 0.3em 0.3em rgba(255, 254, 255, 0.6) inset, 0 -0.1em 0.3em rgba(0, 0, 0, 0.15) inset, 0 0.1em 3px #e86e1c, 0 0.3em 1px #e86e1c, 0 0.5em 5px rgba(0, 0, 0, 0.2);
+    color: #e3700a !important;
+}
+.button.orange:hover {
+    background-color: #f8f3bf;
+}
+
+.button:hover {
+    background-color: #D3D3D3;
+}
+.button:active {
+    -moz-transform: translateY(0.2em);
+    box-shadow: 0 0.3em 0.3em rgba(255, 255, 255, 0.6) inset, 0 -0.1em 0.3em rgba(0, 0, 0, 0.2) inset, 0 0.1em 1px rgba(0, 0, 0, 0.4), 0 0.2em 6px rgba(0, 0, 0, 0.2);
+}
+.button:focus {
+    color: rgba(232, 110, 8, 0.9) !important;
+    outline: medium none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.morph {
+    -moz-transition: -moz-border-radius 0.3s ease-in-out 0s;
+    border-radius: 3em 3em 3em 3em / 2em 2em 2em 2em;
+    border-top: medium none;
+}
+.morph:hover {
+    border-radius: 0em 0em 0em 0em / 0em 0em 0em 0em;
+}
+.morph:active {
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+}
+.morph:after {
+    display: none;
+}
+
+.view {
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+   float: left;
+   border: 10px solid #660000;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: pointer;
+   background: #ccc;
+}
+
+.view-first img {
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-first .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(219,127,8, 0.7);
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+   -webkit-transform: translateY(-100px);
+   -moz-transform: translateY(-100px);
+   -o-transform: translateY(-100px);
+   -ms-transform: translateY(-100px);
+   transform: translateY(-100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-first p {
+   -webkit-transform: translateY(100px);
+   -moz-transform: translateY(100px);
+   -o-transform: translateY(100px);
+   -ms-transform: translateY(100px);
+   transform: translateY(100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-first:hover img {
+   -webkit-transform: translateX(-300px);
+   -moz-transform: translateX(-300px);
+   -o-transform: translateX(-300px);
+   -ms-transform: translateX(-300px);
+   transform: translateX(-300px);
+}
+
+/*.view-first:hover img {
+   -webkit-transform: scale(1.1,1.1);
+   -moz-transform: scale(1.1,1.1);
+   -o-transform: scale(1.1,1.1);
+   -ms-transform: scale(1.1,1.1);
+   transform: scale(1.1,1.1);
+}*/
+.view-first a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-first:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transform: translateY(0px);
+   -moz-transform: translateY(0px);
+   -o-transform: translateY(0px);
+   -ms-transform: translateY(0px);
+   transform: translateY(0px);
+}
+.view-first:hover p {
+   -webkit-transition-delay: 0.1s;
+   -moz-transition-delay: 0.1s;
+   -o-transition-delay: 0.1s;
+   -ms-transition-delay: 0.1s;
+   transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+   -webkit-transition-delay: 0.2s;
+   -moz-transition-delay: 0.2s;
+   -o-transition-delay: 0.2s;
+   -ms-transition-delay: 0.2s;
+   transition-delay: 0.2s;
+}
+				

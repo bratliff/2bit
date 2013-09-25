@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+.grey {color: #aaa;}
+
+/*  City Info   */
+.city_detail_container { display: none; }
+.city_detail_container .city_detail { width: 300px; border: 1px solid #ccc; }
+
+
+/*  Interactive Map Container */
+.map_contianer {
+	background-image: url(../images/template/US_Map.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 600px;
+	position: relative;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+	margin: 40px 0px 0px 20px;
+}
+
+.map_contianer .clear_both { clear: both; line-height: 1px; }
+
+.map_contianer h2 {
+	margin: 0px;
+	font-size: 18px;
+	font-weight: bold;
+	background:none;
+	padding:0px;
+}
+.map_contianer h3 {
+	margin: 0px 0px 12px 0px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #eef60f;
+}
+.map_contianer p { margin: 0px 0px 12px 0px; }
+
+.map_contianer a, a:visited { color: #AA0000; margin: 0px 10px 0px 0px; }
+.map_contianer a.dot {
+	background-image: url(../images/template/dots.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 17px;
+	width: 20px;
+	display: block;
+	position: absolute;
+	cursor: pointer;
+}
+.map_contianer a.dot.selected {
+	background-position: 0px -40px;
+}
+.map_contianer a.dot:hover {
+	background-position: 0px -20px;
+}
+.map_contianer .form_state {
+	position:absolute;
+	top:0px;
+	left:200px;
+}
+
+.map_contianer .detail_container {
+	position: absolute;
+	top: 50px;
+	left: 200px;
+	width: 240px;
+	height: 260px;
+}
+
+.map_contianer .city_detail {
+	position: absolute;
+	top: 0px;
+	width: 230px;
+	padding: 10px 0px 0px 12px;
+	background: #324f3a;
+	border: 1px solid #a9b5c8;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+    background:-webkit-radial-gradient(circle, #809665 0%, #324f3a 100%);
+    background:-moz-radial-gradient(circle, #809665 0%, #324f3a 100%);
+    background:-o-radial-gradient(circle, #809665 0%, #324f3a 100%);
+    background:radial-gradient(circle, #809665 0%, #324f3a 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#809665', endColorstr='#a2bf7d',GradientType=0 );
+}
+
+.map_contianer .city_detail .city_photo {
+	float: left;
+	margin: 0px 15px 0px 0px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	box-shadow: 0px 5px 3px #4e5d74;
+	-webkit-box-shadow: 0px 5px 3px #4e5d74;
+	-moz-box-shadow: 0px 5px 3px #4e5d74;
+	-webkit-border-radius: 8px;
+}
+.map_contianer .city_detail .city_info {
+	width: 130px;
+	float: left;
+	
+}
